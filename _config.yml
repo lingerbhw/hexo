@@ -103,4 +103,5 @@ theme: landscape
 deploy:
   type: 'git'
   repository:
-    github: https://{$GH_TOKEN}@github.com/lingerbhw/lingerbhw.github.io.git,main
+    github: https://github.com/lingerbhw/lingerbhw.github.io.git
+  branch: 'main'
