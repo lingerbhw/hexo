@@ -42,8 +42,11 @@ jobs:
           echo "build blog successful"
       - name: Deploy Linger's Blog # 设置 git 信息并推送静态博客文件
         run: |
-          git config --global user.name "lingerbhw"
-          git config --global user.email "3501737127@qq.com"
-          hexo deploy
-
+          cd ./public
+          git init
+          git config user.name "${{secrets.GIT_NAME}}"
+          git config user.email "${{secrets.GIT_EMAIL}}"
+          git add .
+          git commit -m "Update"
+          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
       - run: echo "Deploy Successful!"
