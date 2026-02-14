@@ -1,5 +1,5 @@
 window.IP_CONFIG = {
-	API_KEY: 'QXh8Xdy75IW1drzPXvjBXqc91z', // API密钥 申请地址：https://api.76.al/
+	API_KEY: 'GNMBZ-YKTKH-25WDQ-WGRXQ-BWR6E-ZTFQN', // API密钥
 	BLOG_LOCATION: {
 		lng: 106.373, // 经度
 		lat: 39.025 // 纬度
@@ -24,35 +24,63 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-const fetchIpData = async () => {
-	const response = await fetch(`https://api.nsmao.net/api/ip/query?key=${encodeURIComponent(IP_CONFIG.API_KEY)}`);
-	if (!response.ok) throw new Error('网络响应不正常');
-	return await response.json();
-};
+const fetchIpData = () => {
+	return new Promise((resolve, reject) => {
+		const callbackName = `jsonpCallback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+		window[callbackName] = (result) => {
+			try {
+				if (!result || !result.result) throw new Error('API响应格式错误');
+				const { ip, location, ad_info } = result.result;
+				resolve({
+					data: {
+						longitude: location.lng,
+						latitude: location.lat,
+						country: ad_info.nation,
+						province: ad_info.province,
+						city: ad_info.city
+					},
+					ip
+				});
+			} catch (error) {
+				reject(error);
+			} finally {
+				delete window[callbackName];
+				const script = document.getElementById(callbackName);
+				if (script) script.remove();
+			}
+		};
 
-const showWelcome = ({
-	data,
-	ip
-}) => {
+		const script = document.createElement('script');
+		script.id = callbackName;
+		script.src = `https://apis.map.qq.com/ws/location/v1/ip?key=${encodeURIComponent(IP_CONFIG.API_KEY)}&output=jsonp&callback=${callbackName}`;
+		script.onerror = () => {
+			delete window[callbackName];
+			script.remove();
+			reject(new Error('网络响应不正常'));
+		};
+		document.head.appendChild(script);
+	});
+};
+const showWelcome = ({data, ip}) => {
 	if (!data) return showErrorMessage();
 
 	const {
-		lng,
-		lat,
+		longitude,
+		latitude,
 		country,
-		prov,
+		province,
 		city
 	} = data;
 	const welcomeInfo = getWelcomeInfoElement();
 	if (!welcomeInfo) return;
 
-	const dist = calculateDistance(lng, lat);
+	const dist = calculateDistance(longitude, latitude);
 	const ipDisplay = formatIpDisplay(ip);
-	const pos = formatLocation(country, prov, city);
+	const pos = formatLocation(country,province, city);
 
 	welcomeInfo.style.display = 'block';
 	welcomeInfo.style.height = 'auto';
-	welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, prov, city);
+	welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
 
 const calculateDistance = (lng, lat) => {

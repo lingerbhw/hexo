@@ -3,59 +3,55 @@ function getHoliday(){
     var closestHoliday = null;
     var minDaysDiff = Infinity;
     const data = [
-        {
-            "name": "元旦",
-            "date": "2025-01-01"
-        },
-        {
-            "name": "腊八节",
-            "date": "2025-01-07"
-        },
-        {
-            "name": "小年",
-            "date": "2025-01-22"
-        },
-        {
-            "name": "除夕",
-            "date": "2025-01-28"
-        },
-        {
-            "name": "春节",
-            "date": "2025-01-29"
-        },
-        {
-            "name": "元宵节",
-            "date": "2025-02-12"
-        },
-        {
-            "name": "龙抬头",
-            "date": "2025-03-01"
-        },
-        {
-            "name": "植树节",
-            "date": "2025-03-12"
-        },
-        {
-            "name": "清明节",
-            "date": "2025-04-04"
-        },
-        {
-            "name": "劳动节",
-            "date": "2025-05-01"
-        },
-        {
-            "name": "端午节",
-            "date": "2025-05-31"
-        },
-        {
-            "name": "中秋节",
-            "date": "2025-10-06"
-        },
-        {
-            "name": "国庆节",
-            "date": "2025-10-01"
-        }
-    ]
+{
+"name": "元旦",
+"date": "2026-01-01"
+},
+{
+"name": "腊八节",
+"date": "2026-01-26"
+},
+{
+"name": "除夕",
+"date": "2026-02-16"
+},
+{
+"name": "春节",
+"date": "2026-02-17"
+},
+{
+"name": "元宵节",
+"date": "2026-03-03"
+},
+{
+"name": "清明节",
+"date": "2026-04-05"
+},
+{
+"name": "劳动节",
+"date": "2026-05-01"
+},
+{
+"name": "端午节",
+"date": "2026-06-19"
+},
+{
+"name": "七夕节",
+"date": "2026-08-19"
+},
+{
+"name": "中秋节",
+"date": "2026-09-25"
+},
+{
+"name": "国庆节",
+"date": "2026-10-01"
+},
+{
+"name": "重阳节",
+"date": "2026-10-18"
+}
+]
     data.forEach(holiday => {
         const holidayDate = new Date(holiday.date);
         const daysDiff = Math.ceil((holidayDate - today) / (1000 * 60 * 60 * 24));
