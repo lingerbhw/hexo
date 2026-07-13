@@ -1,3 +1,7 @@
+https://baihw.cn/tianyiPhoto/index.html
+https://baihw.cn/tetoPhoto/index.html
+https://baihw.cn/mikuPhoto/index.html
+https://baihw.cn/album/index.html
 https://baihw.cn/fcircle/index.html
 https://baihw.cn/friend.json
 https://baihw.cn/cd14cf75/
@@ -38,15 +42,15 @@ https://baihw.cn/tags/vue/
 https://baihw.cn/tags/%E7%B4%A0%E6%9D%90/
 https://baihw.cn/tags/hexo/
 https://baihw.cn/tags/%E6%8A%98%E8%85%BE/
+https://baihw.cn/tags/%E8%85%BE%E8%AE%AF/
 https://baihw.cn/tags/%E7%89%A9%E7%90%86/
 https://baihw.cn/tags/%E7%94%B5%E8%84%91/
 https://baihw.cn/tags/%E7%94%9F%E6%B4%BB/
-https://baihw.cn/tags/%E8%85%BE%E8%AE%AF/
 https://baihw.cn/categories/%E6%95%B0%E5%AD%A6/
 https://baihw.cn/categories/%E9%9A%8F%E7%AC%94/
 https://baihw.cn/categories/vue/
 https://baihw.cn/categories/%E7%B4%A0%E6%9D%90/
 https://baihw.cn/categories/%E6%8A%98%E8%85%BE/
-https://baihw.cn/categories/%E7%89%A9%E7%90%86/
-https://baihw.cn/categories/%E7%94%9F%E6%B4%BB/
 https://baihw.cn/categories/%E8%85%BE%E8%AE%AF/
+https://baihw.cn/categories/%E7%94%9F%E6%B4%BB/
+https://baihw.cn/categories/%E7%89%A9%E7%90%86/
