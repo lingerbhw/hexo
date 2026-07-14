@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://baihw.cn/17d2bb28/</loc>
+    
+    <lastmod>2026-07-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://baihw.cn/tianyiPhoto/index.html</loc>
     
     <lastmod>2026-07-13</lastmod>
@@ -74,6 +83,15 @@
   </url>
   
   <url>
+    <loc>https://baihw.cn/tags/index.html</loc>
+    
+    <lastmod>2025-07-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://baihw.cn/privacy/index.html</loc>
     
     <lastmod>2025-07-23</lastmod>
@@ -83,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://baihw.cn/tags/index.html</loc>
+    <loc>https://baihw.cn/music/index.html</loc>
     
     <lastmod>2025-07-23</lastmod>
     
@@ -110,24 +128,6 @@
   </url>
   
   <url>
-    <loc>https://baihw.cn/music/index.html</loc>
-    
-    <lastmod>2025-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://baihw.cn/copyright/index.html</loc>
-    
-    <lastmod>2025-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://baihw.cn/essay/index.html</loc>
     
     <lastmod>2025-07-23</lastmod>
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://baihw.cn/cookies/index.html</loc>
+    <loc>https://baihw.cn/copyright/index.html</loc>
     
     <lastmod>2025-07-23</lastmod>
     
@@ -156,6 +156,15 @@
   
   <url>
     <loc>https://baihw.cn/about/index.html</loc>
+    
+    <lastmod>2025-07-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://baihw.cn/cookies/index.html</loc>
     
     <lastmod>2025-07-23</lastmod>
     
@@ -451,14 +460,14 @@
   </url>
   
   <url>
-    <loc>https://baihw.cn/categories/%E8%85%BE%E8%AE%AF/</loc>
+    <loc>https://baihw.cn/categories/%E7%89%A9%E7%90%86/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://baihw.cn/categories/%E7%89%A9%E7%90%86/</loc>
+    <loc>https://baihw.cn/categories/%E8%85%BE%E8%AE%AF/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
